@@ -1,0 +1,21 @@
+<VirtualHost *:80>
+    ServerAdmin <%= node['apache']['contact'] %>
+    ServerName xdebug.local
+
+    DocumentRoot <%= node['xdebug-box']['document_root'] %>
+
+    <Directory <%= node['xdebug-box']['document_root'] %>>
+        AllowOverride All
+        Order allow,deny
+        Allow from All
+        Require all granted
+    </Directory>
+    RewriteEngine On
+
+    ErrorLog <%= node['apache']['log_dir'] %>/error.log
+
+    LogLevel warn
+
+    CustomLog <%= node['apache']['log_dir'] %>/access.log combined
+    ServerSignature Off
+</VirtualHost>

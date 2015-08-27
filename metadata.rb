@@ -1,0 +1,12 @@
+name             'xdebug-box'
+maintainer       'Piotr Belina'
+maintainer_email 'belina.piotr@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures xdebug-box'
+long_description 'Installs/Configures xdebug-box'
+version          '0.1.0'
+
+depends 'apt', '~> 2.8.2'
+depends 'apache2', '~> 3.1.0'
+depends 'php',     '~> 1.7.2'
+depends 'xdebug',  '~> 1.0.0'
